@@ -1,0 +1,14 @@
+#Terrafrom directories and files
+.terraform/
+*.tfstate
+*.tfstate.backup
+terraform.tfvars
+
+
+#Security and log files
+*.log
+*.pem
+*.env
+
+
+
