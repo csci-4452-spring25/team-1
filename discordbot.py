@@ -46,7 +46,7 @@ async def traffic(ctx, *, args: str = None):
     data = fetch_traffic(origin, destination)
     await ctx.send(f'🚗 Traffic from {origin} to {destination}: {data}')
 
-@tasks.loop(minutes=5)
+@tasks.loop(hours=5)
 async def traffic_update_loop():
     channel = bot.get_channel(CHANNEL_ID)
     if channel:
