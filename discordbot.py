@@ -40,7 +40,7 @@ async def traffic(ctx, *, args: str = None):
         destination = os.getenv("SCHOOL")
 
     if not origin or not destination:
-        await ctx.send("❗ One of the addresses couldn't be resolved. Check your .env values.")
+        await ctx.send("❗ One of the addresses couldn't be resolved.")
         return
 
     data = fetch_traffic(origin, destination)

@@ -9,7 +9,7 @@ def fetch_traffic(origin, destination):
     endpoint = "https://maps.googleapis.com/maps/api/directions/json"
     params = {
         "origin": origin,
-        "destination": destination,  # You can customize this
+        "destination": destination,  
         "departure_time": "now",
         "traffic_model": "best_guess",
         "mode": "driving",

@@ -14,10 +14,10 @@ provider "aws" {
 }
 
 resource "aws_instance" "discord_bot" {
-  ami           = "ami-0c614dee691cbbf37"  # Amazon Linux 2 (Free tier)
+  ami           = "ami-0c614dee691cbbf37"  
   instance_type = "t2.micro"
-  key_name      = "my-aws-key" # Replace with your key
-  subnet_id     = "subnet-02ee129fd02cdd5f2 " # Replace with your subnet
+  key_name      = "my-aws-key" 
+  subnet_id     = "subnet-02ee129fd02cdd5f2 " 
   vpc_security_group_ids = [aws_security_group.allow_ssh.id]
 
   user_data = <<-EOF
@@ -38,7 +38,7 @@ resource "aws_instance" "discord_bot" {
 resource "aws_security_group" "allow_ssh" {
   name        = "discord-trafficbot-sg"
   description = "Allow SSH and HTTPS"
-  vpc_id      = "vpc-0e70353d11f544d95"  # Replace with your VPC ID
+  vpc_id      = "vpc-0e70353d11f544d95"  
 
   ingress {
     description = "SSH"
