@@ -3,7 +3,7 @@ name: Deploy Discord Bot to EC2
 on:
   push:
     branches:
-      - main  # Change this if you're using another branch
+      - main  
 
 jobs:
   deploy:
